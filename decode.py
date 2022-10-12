@@ -20,7 +20,7 @@ for x in arr:
         # print(arr[x][y])
         arr1.append(re.findall('(\d+|[A-Za-z]+)', y))
 
-
+# print(arr1)
 arr2 = []
 for x in range(len(arr1)):
     arr2.append([])
@@ -35,7 +35,7 @@ for x in range(len(arr1)):
 str = ''
 
 for x in range(len(arr2)):
-   print('CASE',x+1,':',str.join(arr2[x]))
+   print('CASE ',x+1,': ',str.join(arr2[x]), sep='')
 
 
 

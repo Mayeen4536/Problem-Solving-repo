@@ -1,8 +1,9 @@
 n = int(input().strip())
+if n != 0:
 
-arr = []
+    arr = []
 
-for _ in range(n):
-    arr.append(list(map(int, input().rstrip().split())))
+    for _ in range(n):
+        arr.append(list(map(int, input().rstrip().split())))
 
 

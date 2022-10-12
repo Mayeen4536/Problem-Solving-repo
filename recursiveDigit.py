@@ -1,17 +1,26 @@
 def superDigit(n, k):
     # Write your code here
     s = n
-    for _ in range(k-1):
-        s = s + s
+    m = ''
+    for _ in range(k):
+        m = m + s
 
-    # print(s)
-    
-    while len(s) > 1:
-        l = list(s)
+    # print(m)
+
+    while len(m) > 1:
+        l = list(m)
         l = [int(i) for i in l]
-        s = str(sum(l))
+        m = str(sum(l))
         
-    return s
+    return m
+
+# def superDigit(n, k):
+#     Sum=0
+#     for i in n:
+#         Sum=Sum+int(i)*k
+#     if Sum<10:
+#         return Sum
+#     return superDigit(str(Sum),1)
 
 first_multiple_input = input().rstrip().split()
 
@@ -19,7 +28,7 @@ n = first_multiple_input[0]
 
 k = int(first_multiple_input[1])
 
-# n = '12'
+# n = '131'
 # k = 2
 
 result = superDigit(n, k)
